@@ -1,0 +1,11 @@
+<h1>Listing Posts</h1>
+
+<%= link_to "Create A New Post", new_post_path, class: 'new_post' %>
+
+<ul>
+<% @posts.each do |post| %>
+<li>
+  <%= link_to post.title, post_path(post), class: 'post_title' %>
+</li>
+<% end %>
+</ul>
